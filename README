@@ -1,0 +1,12 @@
+# xfinity/comcast keyspace
+
+AFAIK the xfinity keyspace is: 5 char word + 4 char number + 6 char word
+ex: fever4759harbor
+
+xfinity-wordspace.py - quick and shitty code to generate a wordlist for the xfinity wifi keyspace
+
+wordlists folder - contains common 6 letter and 5 letter words as well as all 4 character numbers
+
+full-lists.tar.gz - ridiculous large 5 and 6 character word lists (not a part of keyspace.txt)
+
+keyspace.tar.gz - full keyspace wordlist for cracking with.
