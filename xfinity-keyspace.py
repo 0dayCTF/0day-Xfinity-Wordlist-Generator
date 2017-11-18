@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # example xfinity wifi password: fever7538harbor
-
+import os
 
 print("Creating temp list... Stand by.")
 templist = open("temp.txt", "w")
 
-with open("wordlists/5-letter-words.txt") as fivelist:
+with open("wordlists/5list.txt") as fivelist:
 	with open("wordlists/numbers.txt") as numblist:
 		flist = fivelist.readlines()
 		nlist = numblist.readlines()
@@ -21,7 +21,7 @@ print("\tdone")
 print("Creating final keyspace... Grab a coffee.")
 keyspace = open("keyspace.txt", "w")
 with open("temp.txt") as templist:
-	with open("wordlists/6-letter-words.txt") as sixlist:
+	with open("wordlists/6list.txt") as sixlist:
 		tlist = templist.readlines()
 		slist = sixlist.readlines()
 		for tword in tlist:
