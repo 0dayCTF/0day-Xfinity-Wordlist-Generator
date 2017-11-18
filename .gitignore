@@ -1,3 +1,8 @@
+# repo files - too big
+keyspace.txt
+keyspace.tar.gz
+*.tar.gz
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
