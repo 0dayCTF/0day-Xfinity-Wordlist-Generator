@@ -14,6 +14,7 @@ sources and tools - contains original wordlists, source file on where to find wo
 1. Download the .zip
 2. Install python
 3. Run xfinity-keyspace.py
+4. Run xfinity-keypace reverse.py (to start with 6 letter words)
 4. Sit back and wait! 
 
 # sizes
