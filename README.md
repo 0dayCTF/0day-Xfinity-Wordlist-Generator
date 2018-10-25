@@ -10,7 +10,7 @@ wordlists - contains common 6 letter and 5 letter words as well as all 4 charact
 sources and tools - contains original wordlists, source file on where to find words, as well as scripts to manipulate them.
 	For the 5list.txt and 6list.txt wordlists, I downloaded the top 4000 english words and pulled out all the 5 and 6 character words into lists.
 
-~instructions~
+| instructions |
 1. Download the .zip
 2. Install python
 3. Run xfinity-keyspace.py
