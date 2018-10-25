@@ -1,4 +1,4 @@
-# xfinity/comcast keyspace
+# xfinity/comcast wordlist generator
 
 AFAIK the xfinity keyspace is: 5 char word + 4 char number + 6 char word
 ex: fever4759harbor
@@ -12,6 +12,3 @@ sources and tools - contains original wordlists, source file on where to find wo
 
 # sizes
 keyspace.txt will come out to 75.2 GB in size. 12.2 GB as compressed tar.gz file.
-
-# other options
-there are smaller lists which will result in smaller wordlists. [soxrok2212](https://github.com/soxrok2212/PSKracker/tree/master/dicts/xfinity) has some but i see some 5 letter words missing that i know are used. I might submit a pull request.
