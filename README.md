@@ -3,7 +3,7 @@
 AFAIK the xfinity keyspace is: 5 char word + 4 char number + 6 char word
 ex: fever4759harbor
 
-xfinity-keyspace.py - quick and shitty code to generate a wordlist for the xfinity wifi keyspace
+xfinity-keyspace.py - quick code to generate a wordlist for xfinity wifi passwords
 
 wordlists - contains common 6 letter and 5 letter words as well as all 4 character numbers
 
