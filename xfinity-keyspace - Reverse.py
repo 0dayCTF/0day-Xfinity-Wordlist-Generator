@@ -19,7 +19,7 @@ templist.close()
 print("\tdone")
 
 print("Creating final keyspace... Grab a beer!")
-keyspace = open("keyspace5.txt", "w")
+keyspace = open("keyspace6.txt", "w")
 with open("temp.txt") as templist:
 	with open("wordlists/5list.txt") as sixlist:
 		tlist = templist.readlines()
