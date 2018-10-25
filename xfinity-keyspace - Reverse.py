@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# example xfinity wifi password: fever7538harbor
+# example xfinity wifi password: harbor7538fever
 import os
 
 print("Creating temp list... Stand by.")
