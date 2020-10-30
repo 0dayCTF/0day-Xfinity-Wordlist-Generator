@@ -5,15 +5,15 @@ import os
 print("Creating temp list... Stand by.")
 templist = open("temp.txt", "w")
 
-with open("wordlists/6list.txt") as fivelist:
+with open("wordlists/6list.txt") as sixlist:
 	with open("wordlists/numbers.txt") as numblist:
-		flist = fivelist.readlines()
+		slist = sixlist.readlines()
 		nlist = numblist.readlines()
-		for fword in flist:
+		for fword in slist:
 			for numb in nlist:
 				comb = fword.strip() + numb.strip() + "\n"
 				templist.write(comb)
-fivelist.close()
+sixlist.close()
 numblist.close()
 templist.close()
 print("\tdone")
@@ -21,15 +21,15 @@ print("\tdone")
 print("Creating final keyspace... Grab a beer!")
 keyspace = open("keyspace6letter.txt", "w")
 with open("temp.txt") as templist:
-	with open("wordlists/5list.txt") as sixlist:
+	with open("wordlists/5list.txt") as fivelist:
 		tlist = templist.readlines()
-		slist = sixlist.readlines()
+		flist = fivelist.readlines()
 		for tword in tlist:
-			for sword in slist:
+			for sword in flist:
 				comb = tword.strip() + sword.strip() + "\n"
 				keyspace.write(comb)
 templist.close()
-sixlist.close()
+fivelist.close()
 keyspace.close()
 os.remove("temp.txt")  
 print("\tdone")
