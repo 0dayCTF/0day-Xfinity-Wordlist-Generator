@@ -17,5 +17,8 @@ sources and tools - contains original wordlists, source file on where to find wo
 4. Run xfinity-keypace reverse.py (to start with 6 letter words)
 4. Sit back and wait! 
 
+
 # sizes
 keyspace.txt will come out to 75.2 GB or 150.4 GB (if you run both) in size. 12.2 GB as compressed tar.gz file.
+
+(If you choose to use the big lists, just rename the files in the Python scripts, please note the files will be huge)
