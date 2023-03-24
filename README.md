@@ -5,7 +5,7 @@ ex: fever4759harbor
 
 xfinity-keyspace.py - quick code to generate a wordlist for xfinity wifi passwords
 
-wordlists - contains common 6 letter and 5 letter words as well as all 4 character numbers
+wordlists - contains common 6-letter and 5-letter words as well as all 4 character numbers
 
 sources and tools - contains original wordlists, source file on where to find words, as well as scripts to manipulate them.
 	For the 5list.txt and 6list.txt wordlists, I downloaded the top 4000 english words and pulled out all the 5 and 6 character words into lists.
@@ -14,11 +14,10 @@ sources and tools - contains original wordlists, source file on where to find wo
 1. Download the .zip
 2. Install python
 3. Run xfinity-keyspace.py
-4. Run xfinity-keypace reverse.py (to start with 6 letter words)
 4. Sit back and wait! 
 
 
 # sizes
-keyspace.txt will come out to 75.2 GB or 150.4 GB (if you run both) in size. 12.2 GB as compressed tar.gz file.
+xfinity_forward.txt / xfinity_backward.txt will come out to 75.2 GB or 150.4 GB (if you run both) in size. 12.2 GB as compressed tar.gz file.
 
 (If you choose to use the big lists, just rename the files in the Python scripts, please note the files will be huge)

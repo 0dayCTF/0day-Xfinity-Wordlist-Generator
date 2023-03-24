@@ -20,8 +20,8 @@ SIX_LIST = "wordlists/6list.txt"
 SIX_LIST_BIG = "wordlists/6list-big.txt"
 NUM_LIST = "wordlists/numbers.txt"
 TEMP_LIST = "temp.txt"
-FORWARD = "/Volumes/Data/xfinity_forward.txt"
-BACKWARD = "/Volumes/Data/xfinity_backward.txt"
+FORWARD = "xfinity_forward.txt"
+BACKWARD = "xfinity_backward.txt"
 
 
 def open_word_list(file_name):
@@ -34,38 +34,36 @@ def write_list(file_name, list_data):
 		f_out.write('\n'.join(list_data))
 
 
-def write_to_list_file(file_name, line_data):
-	with open(file_name, "a") as f_out:
-		f_out.write(line_data + "\n")
-
-
 class XfinityWiFiPassword:
-	def __init__(self):
+	def __init__(self, big_list=False):
 		log.info("Xfinity WiFi Password Generator Started")
-		try:
+		self.batch_size_threshold = 5000000  # ~5MB
+		# Remove pre-existing files as to not create duplicates
+		# TODO: Implement a way to pick-up where left off.
+		if os.path.exists(FORWARD):
 			os.remove(FORWARD)
-		except FileNotFoundError:
-			pass
-		try:
+		if os.path.exists(BACKWARD):
 			os.remove(BACKWARD)
-		except FileNotFoundError:
-			pass
-		self.five_list = open_word_list(FIVE_LIST)
-		# self.five_list_big = open_word_list(FIVE_LIST_BIG)
-		self.six_list = open_word_list(SIX_LIST)
-		# self.six_list_big = open_word_list(SIX_LIST_BIG)
+
+		if big_list:
+			self.five_list = open_word_list(FIVE_LIST_BIG)
+			self.six_list_big = open_word_list(SIX_LIST_BIG)
+		else:
+			self.five_list = open_word_list(FIVE_LIST)
+			self.six_list = open_word_list(SIX_LIST)
+
 		self.numbers = open_word_list(NUM_LIST)
 		self.forward_list = []
 		self.backward_list = []
 
 	def add_forward(self, password):
-		if sys.getsizeof(self.forward_list) >= 5000000:
+		if sys.getsizeof(self.forward_list) >= self.batch_size_threshold:
 			write_list(FORWARD, self.forward_list)
 			self.forward_list.clear()
 		self.forward_list.append(password)
 
 	def add_backward(self, password):
-		if sys.getsizeof(self.backward_list) >= 5000000:
+		if sys.getsizeof(self.backward_list) >= self.batch_size_threshold:
 			write_list(FORWARD, self.backward_list)
 			self.backward_list.clear()
 		self.backward_list.append(password)
@@ -86,6 +84,7 @@ class XfinityWiFiPassword:
 
 
 if __name__ == "__main__":
-	pass_gen = XfinityWiFiPassword()
+	# If you want the big list to process, change big_list to True
+	pass_gen = XfinityWiFiPassword(big_list=False)
 	pass_gen.forward()
 	pass_gen.backward()
