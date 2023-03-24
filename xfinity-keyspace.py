@@ -19,7 +19,6 @@ FIVE_LIST_BIG = "wordlists/5list-big.txt"
 SIX_LIST = "wordlists/6list.txt"
 SIX_LIST_BIG = "wordlists/6list-big.txt"
 NUM_LIST = "wordlists/numbers.txt"
-TEMP_LIST = "temp.txt"
 FORWARD = "xfinity_forward.txt"
 BACKWARD = "xfinity_backward.txt"
 
